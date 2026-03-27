@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevFlix | Filmes e Séries Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://dev.santecweb.com.br/devFlix.png"
+      type="image/.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #141414;
+        color: #fff;
+        font-family: "roboto" sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header-principal {
+        background-color: rgb(0, 0, 0, 0.9);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .flex-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: "Bebas Neue", cursive;
+        color: #e50914;
+        letter-spacing: 2px;
+      }
+
+      .logo span {
+        color: #fff;
+      }
+
+      .flex-menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .flex-menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 0rem;
+        transition: 0.3s;
+      }
+
+      .flex-menu a:hover {
+        color: #ff0202;
+      }
+
+      .avatar {
+        width: 35px;
+        border-radius: 4px;
+      }
+
+      .banner-destaque {
+        height: 70vh;
+        background:
+          linear-gradient(to right, #141414, transparent),
+          url(https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=1200&fit=crop%27);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+      }
+
+      .content-banner {
+        max-width: 600px;
+      }
+
+      .titulo-filme {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+      }
+
+      .sinopse {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        color: #ececec;
+      }
+
+      .botoes-acao {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-play {
+        background-color: #fff;
+        color: #000000;
+      }
+
+      .btn-info {
+        background-color: rgba(255, 0, 0, 0.7);
+        color: #fff;
+      }
+
+      .sessao-titulo {
+        margin: 40px 0 20px;
+        font-size: 1.5rem;
+      }
+      .grid-filmes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-self: flex-start;
+      }
+
+      .card-filme {
+        flex: 1 1 200px;
+        max-width: 280px;
+        background-color: #1a1a1a;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .card-filme:hover {
+        transform: scale(1.05);
+      }
+
+      .card-filme:img {
+        width: 100%;
+        display: block;
+      }
+
+      .card-info {
+        padding: 15px;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nota {
+        color: #ff0000;
+        font-weight: bold;
+      }
+
+      .rodape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: #b10000;
+        padding: 20px 0;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-principal">
+      <div class="container flex-header">
+        <h1 class="logo">DEV<span>FLIX</span></h1>
+        <nav class="menu-nav">
+          <ul class="flex-menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Bombando</a></li>
+          </ul>
+        </nav>
+        <div class="perfil">
+          <img
+            src="https://ui-avatars.com/api/?name=User&background=E50914&color=fff"
+            alt="Perfil"
+            class="avatar"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="banner-destaque">
+      <div class="container content-banner">
+        <h2 class="titulo-filme">CSS: O Despertar do Flexbox</h2>
+        <p class="sinopse">
+          Em um mundo dominado por floats e tabelas, um desenvolvedor descobre o
+          poder de alinhar itens sem perder a sanidade.
+        </p>
+
+        <div class="botoes-acao">
+          <button class="btn btn-play">▶ Assistir</button>
+          <button class="btn btn-info">ⓘ Mais informações</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <h3 class="sessao-titulo">Populares no DevFlix</h3>
+
+      <section class="grid-filmes">
+        <article class="card-filme">
+          <img
+            src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=450&fit=crop"
+            alt="Filme 1"
+          />
+          <div class="card-info">
+            <div class="card-header">
+              <h4>Matrix Code</h4>
+              <span class="nota">4.9</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-filme">
+          <img
+            src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=300&h=450&fit=crop"
+            alt="Filme 2"
+          />
+          <div class="card-info">
+            <div class="card-header">
+              <h4>The Script</h4>
+              <span class="nota">4.5</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-filme">
+          <img
+            src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&h=450&fit=crop"
+            alt="Filme 3"
+          />
+          <div class="card-info">
+            <div class="card-header">
+              <h4>Bug Hunter</h4>
+              <span class="nota">4.2</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-filme">
+          <img
+            src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&h=450&fit=crop"
+            alt="Filme 4"
+          />
+          <div class="card-info">
+            <div class="card-header">
+              <h4>Final Deploy</h4>
+              <span class="nota">5.0</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <span>&copy;DevFlix | todos os direitos resevados - 2026</span>
+    </footer>
+  </body>
+</html>
