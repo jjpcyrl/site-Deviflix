@@ -4,6 +4,10 @@
         box-sizing: border-box;
       }
 
+      html{
+        scroll-behavior: smooth;
+      }
+
       body{
         background-color: #141414;
         color: #fff;
@@ -123,10 +127,12 @@ color: #fff;
 
 }
 .grid-filmes{
+    margin: 25px 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-self: flex-start;
+   
 }
 
 .card-filme{
@@ -172,4 +178,53 @@ transform: scale(1.05);
     background-color: #b10000;
     padding: 20PX 0;
     margin-top: 50px;
+}
+
+/* ajuste responsivo */
+
+/* ajuste para tablestes e celulares menores que 768px */
+@media (max-width: 768px){
+
+
+.flex-menu{
+    display: none;
+}
+
+.titulo-filme{
+    font-size: 2rem;
+}
+
+.sinopse{
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.botoes-acao{
+    flex-direction: column;
+}
+
+.btn{
+    width: 100%;
+    justify-content: center;
+
+}
+
+}
+
+/*  configuracoes para dispositivos menores que 480px */
+@media (max-width: 480px){
+
+    .grid-filmes{
+        justify-content: center;
+
+    }
+
+    .card-filme{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
 }
